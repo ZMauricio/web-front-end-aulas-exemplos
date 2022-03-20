@@ -1,0 +1,37 @@
+<h1>Exemplo 1 - Uso padrão do ngStyle</h1>
+
+<p [ngStyle]="{'font-size': '30px'}">
+    valor fixo na tela
+</p>
+
+<h1>Exemplo 2 - Uso padrão do ngStyle combinado com event binding</h1>
+
+<p [ngStyle]="{'font-size': valorFonte}">
+     método da classe componente sendo referenciado no template (fonte aumenta)
+</p>
+
+<button class="btn btn-primary" (click)="incrementar()">Maior</button>
+
+
+<h1>Exemplo 3 - Uso padrão do ngStyle e operador lógico para escolher entre diferentes estilos</h1>
+
+<p [ngStyle]="{'font-size': validaFonte ? 'x-large':'smaller', 'color': validaCor? 'red':'blue'}">
+    Altera o tamanho ou a cor da fonte usando operador ternário
+</p>
+
+<button class="btn btn-primary m-5" (click)="mudarFonte()">mudarFonte</button>
+<button class="btn btn-primary m-5" (click)="mudarCor()">mudarCor</button>
+
+
+<h1>Exemplo 4 - Uso padrão do style binding </h1>
+<p [style.font-size]="'30px'">valor fixo na tela</p>
+
+<h1>Exemplo 5 - Uso padrão do style binding combinado com event binding </h1>
+
+<p [style.font-size]="valorFonte">
+  método da classe componente sendo referenciado no template (fonte aumenta)
+</p>
+
+<button class="btn btn-primary m-5" (click)="incrementar()">Maior</button>
+
+   

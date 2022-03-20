@@ -1,0 +1,33 @@
+<h1>Exemplo 1 - Uso padrão do class binding</h1>
+
+<p [class.cor-fundo]="true">
+    Usando class binding
+</p>
+
+
+<h1>Exemplo 2 - Uso padrão do ngClass</h1>
+
+<p [ngClass]="{'cor-fundo': true}">
+    Usando o ngClass
+</p>
+
+<h1>Exemplo 3 - Uso padrão do ngClass combinado com event binding</h1>
+
+<p [ngClass]="{'cor-fundo': ativado}">
+    Usando o ngClass
+</p>
+
+<button class="btn btn-primary" (click)="aplicarCSS()">Mudar CSS</button>
+    
+<h1>Exemplo 4 - Uso padrão do ngClass com várias classes CSS</h1>
+
+<p [ngClass]="{'cor-fundo': true, 'estilo-letra': true, 'borda-paragrafo': true}">
+    Usando o ngClass com várias classes CSS
+</p>
+
+
+<h1>Exemplo 5 - Uso padrão do ngClass com o uso de um método para retornar as classes CSS</h1>
+
+<p [ngClass]="classesCSS()">
+    Usando o ngClass com o uso de um método para retornar as classes CSS
+</p>

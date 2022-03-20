@@ -1,0 +1,70 @@
+
+<h1>Exemplo 1 - Uso padrão do *ngFor</h1>
+
+<h3>Lista de cursos</h3>
+<ul>
+  <li *ngFor="let nome of cursos">
+    {{nome}}
+  </li>
+</ul>
+
+
+<h1>Exemplo 2 - Uso do *ngFor com a propriedade index</h1>
+
+<h3>Lista de cursos</h3>
+<ul>
+  <li *ngFor="let nome of cursos; let i=index">
+    O curso {{nome}} está na posição {{i}}.
+  </li>
+</ul>
+
+<h1>Exemplo 3 - Uso do *ngFor com a propriedade last</h1>
+
+<h3>Lista de cursos</h3>
+<ul>
+  <li *ngFor="let nome of cursos; let ehUltimo=last">
+    O curso {{nome}} está na última posição? {{ehUltimo}}.
+  </li>
+</ul>
+
+<h1>Exemplo 4 - Uso do *ngFor com a propriedade even</h1>
+
+<h3>Lista de cursos</h3>
+<ul>
+  <li *ngFor="let nome of cursos; let ehPar=even">
+    O curso {{nome}} está na em uma posição de índice par? {{ehPar}}.
+  </li>
+</ul>
+
+<h1>Exemplo 5 - Uso do *ngFor com a propriedade odd</h1>
+
+<h3>Lista de cursos</h3>
+<ul>
+  <li *ngFor="let nome of cursos; let ehImpar=odd">
+    O curso {{nome}} está na em uma posição de índice ímpar? {{ehImpar}}.
+  </li>
+</ul>
+
+
+<h1>Exemplo 6 - Uso do *ngFor com as propriedades even e odd, bem como o uso de estilos CSS</h1>
+
+<h3>Lista de cursos</h3>
+<ul>
+  <li *ngFor="let nome of cursos; let ehPar=even; let ehImpar=odd">
+
+    <div [ngClass]="{'impar-font': ehImpar, 'par-font': ehPar}">{{nome}}</div>
+
+  </li>
+</ul>
+
+
+<h1>Exemplo 7 - Uso do *ngFor combinado com a propriedade even e a diretiva *ngIf</h1>
+
+<h3>Lista de cursos</h3>
+<ul>
+  <div *ngFor="let nome of cursos; let ehPar=even">
+    <li *ngIf="ehPar">
+      {{nome}}
+    </li>
+  </div>
+</ul>

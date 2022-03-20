@@ -1,0 +1,13 @@
+.blocoUm {
+ background-color: red;
+ width: 300px;
+ height: 300px;
+ margin-bottom: 10px;
+}
+
+.blocoDois {
+    background-color: rgb(58, 8, 241);
+    width: 300px;
+    height: 300px;
+    margin-bottom: 10px;
+}

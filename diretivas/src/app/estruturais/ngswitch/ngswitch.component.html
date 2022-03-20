@@ -1,0 +1,14 @@
+
+<h1>Exemplo 1 - Uso padrão do *ngSwitch</h1>
+
+<h3>Escolha um curso:</h3>
+<select [(ngModel)]="selecionado">
+  <option *ngFor="let opcao of cursos">{{opcao}}</option>
+</select>
+ 
+<div [ngSwitch]="selecionado">
+  <div class="bloco1" *ngSwitchCase="cursos[0]">{{cursos[0]}}</div>
+  <div class="bloco2" *ngSwitchCase="cursos[1]">{{cursos[1]}}</div>
+  <div class="bloco3" *ngSwitchCase="cursos[2]">{{cursos[2]}}</div>
+  <div class="bloco4" *ngSwitchDefault>{{cursos[3]}}</div>
+</div>
